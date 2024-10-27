@@ -1,0 +1,84 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --highlight-color: #b74b4b;
+    --background-color: black;
+    --text-color: wheat;
+    --font-family: 'Finger Paint', cursive; /* Defined font for consistency */
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-family: var(--font-family); /* Use the defined font */
+    display: flex; /* Use flexbox for centering */
+    flex-direction: column; /* Stack children vertically */
+    align-items: center; /* Center children horizontally */
+    justify-content: center; /* Center children vertically */
+}
+
+/* Header */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1rem 9%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--background-color);
+    z-index: 100;
+}
+
+.logo {
+    font-size: 3rem;
+    color: var(--highlight-color);
+    font-weight: 800;
+    cursor: pointer;
+}
+
+nav a {
+    font-size: 1.8rem;
+    color: var(--text-color);
+    margin-left: 4rem;
+    font-weight: 500;
+    transition: 0.3s ease;
+    text-decoration: none; /* No underline */
+}
+
+nav a:hover,
+nav a.active {
+    color: var(--highlight-color);
+}
+
+/* Button Container */
+.button-container {
+    display: flex; /* Align buttons horizontally */
+    gap: 20px; /* Space between buttons */
+}
+
+/* Button */
+button {
+    padding: 15px 25px; /* Padding for button */
+    background-color: transparent;
+    border: 0.2rem solid var(--highlight-color);
+    font-size: 1.5rem; /* Adjust font size */
+    border-radius: 5px; /* Slightly rounded corners */
+    transition: 0.3s ease, transform 0.3s ease; /* Smooth transition for hover effect */
+    color: var(--highlight-color);
+    font-family: var(--font-family); /* Ensure button uses the correct font */
+}
+
+button:hover {
+    transform: scale(1.1) translateY(-5px); /* Scale effect on hover */
+    background-color: var(--highlight-color); /* Change background color on hover */
+    color: black; /* Change text color on hover */
+}

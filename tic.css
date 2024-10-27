@@ -1,0 +1,125 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --highlight-color: #b74b4b;
+    --background-color: black;
+    --text-color: wheat;
+    --winning-blocks: #2d414b;
+    --font-family: 'Finger Paint', cursive; /* Defined font for consistency */
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    background-color: var(--background-color); /* Consistent background */
+    color: var(--text-color);
+    font-family: var(--font-family); /* Use the defined font */
+}
+
+/* Header */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1rem 9%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--background-color);
+    z-index: 100;
+}
+
+.logo {
+    font-size: 3rem;
+    color: var(--highlight-color);
+    font-weight: 800;
+    cursor: pointer;
+}
+
+nav a {
+    font-size: 1.8rem;
+    color: var(--text-color);
+    margin-left: 4rem;
+    font-weight: 500;
+    transition: 0.3s ease;
+    border-bottom: 3px solid transparent;
+    text-decoration: none; /* No underline */
+}
+
+nav a:hover,
+nav a.active {
+    color: var(--highlight-color);
+    border-bottom: 3px solid var(--highlight-color);
+}
+
+/* Heading */
+h1 {
+    font-size: 54px;
+    text-transform: uppercase;
+    color: var(--text-color);
+}
+
+/* Container */
+.container {
+    padding: 40px;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: var(--background-color);
+}
+
+/* Gameboard */
+#gameboard {
+    width: 300px;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+
+.box {
+    height: 100px;
+    width: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-color);
+    font-size: 120px;
+    border-right: 2px solid var(--highlight-color);
+    border-bottom: 2px solid var(--highlight-color);
+}
+
+.box:nth-child(3n) {
+    border-right: none;
+}
+
+.box:nth-child(6) ~ .box {
+    border-bottom: none;
+}
+
+/* Button */
+button {
+    padding: 10px 20px;
+    border-radius: 10px;
+    background-color: var(--background-color);
+    color: var(--highlight-color);
+    border: 1px solid var(--highlight-color);
+    font-size: 18px;
+    font-family: var(--font-family); /* Ensure button uses the correct font */
+    transition: 200ms transform;
+    font-weight: 600;
+}
+
+button:hover {
+    cursor: pointer;
+    transform: translateY(-2px);
+    background-color: var(--highlight-color); /* Optional: change background on hover */
+    color: black; /* Optional: change text color on hover */
+}
